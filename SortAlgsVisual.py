@@ -21,11 +21,13 @@ width=900
 height=600
 numBars=100
 maxVal=100
+delay=20
 
-barClr=(0, 204, 102)
-barClrView=(255, 0, 0)
-barClrSwitch=(0, 0, 153)
-barClrEnd=(255, 102, 0)
+
+barClr=(31, 219, 112)
+barClrView=(240, 98, 117)
+barClrSwitch=(41, 79, 194)
+barClrEnd=(235, 131, 87)
 
 btnHover=(97, 187, 254)
 btnClr=(70,150,220)
@@ -43,7 +45,7 @@ def refill():
     screen.fill((255,255,255))
     draw()
     pygame.display.update()
-    pygame.time.delay(20)
+    pygame.time.delay(delay)
 
 def button(msg,font,x,y,w,h,active,inactive):
     mouse=pygame.mouse.get_pos()
@@ -54,7 +56,7 @@ def button(msg,font,x,y,w,h,active,inactive):
 
     
     text=font.render(msg,1,(255,255,255))
-    text_rect = text.get_rect(center=(x+(w/2), y+(h/2)))
+    text_rect = text.get_rect(center=(x+(w//2), y+(h//2)))
     screen.blit(text, text_rect)
 
 
@@ -68,7 +70,7 @@ def draw():
         screen.blit(desc, (300, 60))
     #render buttons
     #new Array (top right x,top right y, len, width)
-    button("New Array",fnt,130,675,150,55,btnHover,btnClr)
+    button("New Array",fnt,130,675,150,55,(14, 237, 134),(11, 181, 102))
     # Insertion Sort
     button("Insertion Sort",fnt1,350,660,125,35,btnHover,btnClr)
     # Bucket Sort
@@ -374,11 +376,11 @@ while run:
                 elif 650+125>mouse[0]>650 and 700+35>mouse[1]>700:
                     sortingMethod="Heap"
                     heapSort(num_array)
-                
 
     #draw the new events.
     draw()
     sortingMethod=""
+    delay=20
 
     pygame.display.update()
     #sortingMethod=""
