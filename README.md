@@ -6,6 +6,8 @@ Visualization of some popular sorting algorithms. Made with pygame
 Python/Pygame application which visualizes Insertion Sort, Bucket Sort, Merge Sort, Quick Sort, Bubble Sort, and Heap Sort on a array of 100 elements. 
 
 Usage: Download SortAlgsVisual.py and run.
+<br />
+<br />
 ![Demo Image](/images/VisualizeDemo.PNG)
 
 Colors:
@@ -14,5 +16,6 @@ Colors:
 3. orange: Value in correct index.
 
 ![Demo Image](/images/DemoinProgress.PNG)
+<br />
 Note: Closing the tab as the program is sorting results in an interruption in process so will display Python is not responding. 
 
